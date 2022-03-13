@@ -10,4 +10,8 @@ jQuery(function($) {
 	//Admin Menu
 	const adminHeader = require('./_site/adminHeader');
 	adminHeader.init();
+
+	//Admin Menu
+	const videoPostsSlider = require('./_site/video-posts-slider');
+	videoPostsSlider.init();
 });
