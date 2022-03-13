@@ -1,6 +1,16 @@
 <div class="video-posts">
 	<div class="video-posts-container">
-		<span class="video-posts-counter">Hittar 9 filmer</span>
+		<?php 
+		$count_posts = wp_count_posts($type = 'video');
+ 
+		if ( $count_posts ) :
+			$published_posts = $count_posts->publish;
+			?>
+			<span class="video-posts-counter">Hittar <?php esc_html_e($published_posts); ?> filmer</span>
+			<?php
+		endif;
+		?>
+
 		<div class="video-posts-wrapper">
 			<?php 
 				$args = array(  

@@ -217,3 +217,14 @@ require('security.php');
 }
 
 add_action( 'init', 'victoriakliniken_video_post_type_name' );
+
+/*------------------------------------------------------------------------------------------
+
+# Exclude node_modules and .git folders from All In One Exports
+------------------------------------------------------------------------------------------*/
+
+add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
+    $exclude_filters[] = 'themes/astra-child/node_modules';
+    $exclude_filters[] = 'themes/astra-child/.git';
+    return $exclude_filters;
+});
