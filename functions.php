@@ -176,3 +176,44 @@ function output_callback($buffer) {
 
 // Disable RSS feed, JSON API and prevent User Enumeration Attack
 require('security.php');
+
+/*------------------------------------------------------------------------------------------
+     # CUSTOM POST TYPE
+ ------------------------------------------------------------------------------------------*/
+ function victoriakliniken_video_post_type_name() {
+    $singular = 'Video';
+    $plural = 'Videos';
+    $slug = str_replace( ' ', '_', strtolower( $singular ) );
+
+    $labels = array(
+        'name' 			      => __( $plural, 'victoriakliniken_video' ),
+        'singular_name' 	  => __( $singular, 'victoriakliniken_video' ),
+        'add_new' 		      => _x( 'Add New', 'victoriakliniken_video', 'victoriakliniken_video' ),
+        'add_new_item'  	  => __( 'Add New ' . $singular, 'victoriakliniken_video' ),
+        'edit'		          => __( 'Edit', 'victoriakliniken_video' ),
+        'edit_item'	          => __( 'Edit ' . $singular, 'victoriakliniken_video' ),
+        'new_item'	          => __( 'New ' . $singular, 'victoriakliniken_video' ),
+        'view' 			      => __( 'View ' . $singular, 'victoriakliniken_video' ),
+        'view_item' 		  => __( 'View ' . $singular, 'victoriakliniken_video' ),
+        'search_term'   	  => __( 'Search ' . $plural, 'victoriakliniken_video' ),
+        'parent' 		      => __( 'Parent ' . $singular, 'victoriakliniken_video' ),
+        'not_found'           => __( 'No ' . $plural .' found', 'victoriakliniken_video' ),
+        'not_found_in_trash'  => __( 'No ' . $plural .' in Trash', 'victoriakliniken_video' ),
+    );
+
+    $args = array(
+        'labels'              => $labels,
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'has_archive'         => true,
+        'rewrite'             => array('slug' => $slug),
+        'menu_icon'           => 'dashicons-admin-post',
+        'supports'            => array( 'title', 'thumbnail', 'editor' )
+    );
+
+    register_post_type( $slug, $args );
+}
+
+add_action( 'init', 'victoriakliniken_video_post_type_name' );

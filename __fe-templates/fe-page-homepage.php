@@ -16,6 +16,8 @@ get_header(); ?>
 			get_template_part( '__fe-template-parts/fe-component', 'banner-example' );
 			get_template_part( '__fe-template-parts/fe-component', 'text-block-example' );
 			get_template_part( '__fe-template-parts/fe-component', 'slider-example' );
+			get_template_part( '__fe-template-parts/fe-component', 'video-posts' );
+			get_template_part( '__fe-template-parts/fe-component', 'hero-content' );
 			?>
 
 		</main><!-- #main -->
