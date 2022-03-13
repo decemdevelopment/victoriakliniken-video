@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*!
-Theme Name: victoriakliniken_video Theme
+Theme Name: Victoria Kliniken video Theme
 Theme URI: http://underscores.me/
-Author: victoriakliniken_video.co
-Author URI: http://victoriakliniken_video.co/
+Author: decem.co
+Author URI: http://decem.co/
 Description: Custom WordPress theme. The theme is based on _s (underscores) framework and includes a wide variety of functionalities that can serve for your content management without having to have programming skills.
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -3738,6 +3738,64 @@ a:hover, a:focus, a:active {
 
 .copyright a {
   color: #fff;
+}
+
+.video-posts {
+  background: #f7f4ef;
+  padding-bottom: 218px;
+}
+
+.video-posts .video-posts-container {
+  max-width: 1234px;
+  margin: 0 auto;
+}
+
+.video-posts .video-posts-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px 50px;
+}
+
+.video-posts .video-posts-counter {
+  display: block;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.video-posts .video-post {
+  cursor: pointer;
+}
+
+.video-posts .video-link {
+  position: relative;
+  margin-bottom: 20px;
+  max-height: 211px;
+}
+
+.video-posts .video-link iframe {
+  max-height: 211px;
+}
+
+.video-posts .video-link .video-overlay {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.video-posts .video-date {
+  display: block;
+  font-size: 15px;
+  color: #adadad;
+  margin-bottom: 15px;
+}
+
+.video-posts .video-title {
+  display: block;
+  font-size: 20px;
+  color: #000;
+  line-height: 1.5;
 }
 
 .hero-content {
