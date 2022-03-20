@@ -206,14 +206,25 @@
 			transition: 0.3s;
 		}
 
+		.footer-social-icon {
+			font-size: 20px;
+			padding-right: 20px;
+
+			&::before {
+				transition: $dur $ease;
+			}
+		}
+
 		&:hover {
 			svg path {
 				fill: $grey-hover;
 			}
-		}
-		.footer-social-icon {
-			font-size: 20px;
-			padding-right: 20px;
+
+			.footer-social-icon {
+				&::before {
+					color: $beige;
+				}
+			}
 		}
 	}
 
