@@ -9,8 +9,9 @@ optgroup,
 textarea {
 	color: $black;
 	font-family: $font-main;
-	font-size: 16px;
-	line-height: 1.35;
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 300;
 }
 
 p {
@@ -42,8 +43,9 @@ pre {
 ## Entry Content
 --------------------------------------------------------------*/
 .entry-content {
-	font-size: 16px;
+	font-size: 14px;
 	margin: 5px 0 0;
+	line-height: 1.6;
 
 	h1,
 	h2,
@@ -51,39 +53,59 @@ pre {
 	h4,
 	h5,
 	h6 {
-		line-height: 1.35;
 		margin-bottom: 15px;
 		color: $black;
+		font-family: $font-default-serif;
+		line-height: 1.35;
 	}
 
-	h2 {
-		font-size: 24px;
-		font-weight: 700;
-	}
-
-	h3 {
-		font-size: 18px;
-	}
-
-	h4 {
-		font-size: 14px;
-	}
-
-	h5 {
-		font-size: 12px;
-	}
-
+	h4,
+	h5,
 	h6 {
-		font-size: 10px;
+		font-family: $font-main;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+	
+	h2 {
+		font-size: 25px;
+	}
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 14px;
+		font-family: $font-main;
+		font-weight: 500;
+		margin-top: 52px;
+		margin-bottom: 17px;
+
+		@include mq($tablet, min) {
+			font-size: 20px;
+			margin-top: 70px;
+			margin-bottom: 22px;
+		}
 	}
 
 	p {
 		line-height: 1.45;
-		margin-bottom: 27px;
+		margin-bottom: 24px;
+		font-size: 14px;
+
+		@include mq($tablet, min) {
+			font-size: 20px;
+		}
 
 		strong {
 			font-weight: 400;
 			color: $black;
+		}
+
+		&:last-child {
+			margin-bottom: 5px;
 		}
 	}
 
@@ -101,11 +123,17 @@ pre {
 	}
 
 	ul {
-		margin-left: 20px;
-
 		li {
+			position: relative;
+			padding-left: 17px;
 			&::before {
-				content: '-';
+				content: '';
+				position: absolute;
+				top: 9px;
+				left: 0;
+				width: 4px;
+				height: 4px;
+				background-color: $grey-dark;
 				display: inline-block;
 				margin-right: 4px;
 			}
@@ -117,21 +145,37 @@ pre {
 
 		li {
 			list-style: decimal;
+
+			a {
+				display: inline;
+				transition: $dur $ease;
+				
+				&:hover {
+					color: $brown-light;
+
+					&::before {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 
 	a {
 		display: inline-block;
 		position: relative;
+		font-weight: 600;
+		color: $brown;
+		font-size: 15px;
 
 		&::before {
 			content: '';
 			position: absolute;
 			left: 0;
-			bottom: 0;
+			bottom: 3px;
 			height: 1px;
 			width: 0;
-			background: $black;
+			background: $brown;
 			transition: $dur $ease;
 		}
 
@@ -183,7 +227,50 @@ pre {
 	}
 
 	td {
-		border-bottom: 1px solid $black;
-		padding: 20px 0 5px;
+		padding: 0 5px 5px 0;
+
+		strong {
+			font-weight: 600;
+		}
 	}
+
+	.btn-light {
+		&::before {
+			display: none;
+		}
+	}
+
+	@include mq($tablet, min) {
+		font-size: 20px;
+		// white-space: pre-line;
+		
+		ul {
+			li {
+				padding-left: 27px;
+
+				&::before {
+					width: 8px;
+					height: 8px;
+					top: 12px;
+				}
+			}
+		}
+	}
+}
+
+.section-title {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-family: $font-default-serif;
+	font-style: italic;
+	line-height: 1.2;
+
+	@include mq($tablet, min) {
+		font-size: 40px;
+	}
+}
+
+.section-title--small {
+	font-size: 30px;
 }

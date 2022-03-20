@@ -11,7 +11,11 @@ jQuery(function($) {
 	const adminHeader = require('./_site/adminHeader');
 	adminHeader.init();
 
-	//Admin Menu
+	// Sticky Header
+	const stickyHeader = require('./_site/stickyHeader');
+	stickyHeader.init();
+
+	// Video Posts Slider
 	const videoPostsSlider = require('./_site/video-posts-slider');
 	videoPostsSlider.init();
 });

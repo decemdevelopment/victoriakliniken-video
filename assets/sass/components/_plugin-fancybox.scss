@@ -1,0 +1,42 @@
+.fancybox-bg {
+    background-color: $white;
+    opacity: 1 !important; // sass-lint:disable-line no-important
+}
+
+.fancybox-slide {
+    padding: 44px 150px;
+}
+
+.fancybox-navigation {
+    .fancybox-button--arrow_left,
+    .fancybox-button--arrow_right {
+        transition: $dur $ease;
+
+        &:hover {
+            background-color: $beige;
+        }
+    }
+
+    .fancybox-button--arrow_left {
+        left: 40px;
+    }
+
+    .fancybox-button--arrow_right {
+        right: 40px;
+    }
+}
+
+.fancybox-close-small {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    width: 64px;
+    height: 64px;
+    color: $black;
+
+    svg {
+        path {
+            fill: $black;
+        }
+    }
+}

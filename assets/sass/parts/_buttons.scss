@@ -1,3 +1,74 @@
 /*--------------------------------------------------------------
 ## Buttons
 --------------------------------------------------------------*/
+
+.btn {
+    display: inline-flex;
+    background-color: $grey-darker;
+    color: $white;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: $dur $ease;
+    line-height: 1;
+    border: 1px solid transparent;
+
+    &:hover {
+        background-color: $grey-hover;
+
+        .btn-icon {
+            &::before {
+                color: $grey-darker;
+            }
+        }
+    }
+    @include mq($tablet, min) {
+        font-size: 15px;
+        letter-spacing: 0.75px;
+        padding: 15px 18px;
+    }
+}
+
+.btn-text {
+    font-size: 12px;
+
+    @include mq($tablet, min) {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+.btn-icon {
+    margin-left: 8px;
+
+    &::before {
+        font-size: 10px;
+        color: $white;
+    }
+}
+
+.btn--light {
+    background-color: transparent;
+    color: $grey-dark;
+    border: 1px solid $grey-dark;
+
+    &::before {
+        color: $grey-dark;
+        margin-right: 5px;
+        font-size: 10px;
+    }
+
+    &:hover {
+        background-color: $grey-dark;
+        color: $white;
+        
+        .btn-icon::before {
+            color: $white;
+        }
+    }
+
+    .btn-icon::before {
+        color: $grey-darker;
+    }
+
+}

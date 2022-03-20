@@ -1,4 +1,5 @@
 "use strict";
+
 let Global = require('./global');
 module.exports = {
 	/*-------------------------------------------------------------------------------
@@ -17,9 +18,9 @@ module.exports = {
         $('[data-fancybox]').fancybox({
             toolbar  : false,
             smallBtn : true,
-            iframe : {
-                preload : false
-            }
+            // iframe : {
+            //     preload : false
+            // }
         })
         
 	}

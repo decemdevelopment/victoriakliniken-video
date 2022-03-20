@@ -2,16 +2,38 @@
 ## Variables
 --------------------------------------------------------------*/
 // Fonts
-$font-default-serif: Georgia, serif;
-$font-default-sans-serif: Arial, Helvetica, sans-serif;
+$font-default-serif: 'Adobe Garamond Pro', serif;
+$font-default-sans-serif: 'Proxima Nova', Arial, Helvetica, sans-serif;
 
 $font-main: $font-default-sans-serif;
+$font-serif: $font-default-serif;
 
 // Colors
 $white: #fff;
+$white-smoke: #f7f4ef;
+$white-antique: #efebe4;
+$light-smoke: #f5f1ec;
+$dark-smoke: #e6dbc7;
 $black: #000;
-$gray-light: #f7f4ef;
-$gray: #adadad;
+$grey: #b4b4b4;
+$grey-hover: #818181;
+$grey-dark: #2f2f2f;
+$grey-darker: #212121;
+$grey-light: #ccc;
+$grey-border: #d1d1d1;
+$gray-line: #6e6e6e;
+$grey-chalice: #adadad;
+$sandstone: #796f5b;
+$brown: #906d5c;
+$brown-oak: #805910;
+$coffee: #e9ded3;
+$brown-light: #d5b48a;
+$beige: #dedad3;
+$beige-light: #f2efea;
+$beige-lighter: #fffefd;
+$button-active: #ddc8b1;
+$button-hover: #f4e6d8;
+$beige: #b18633;
 
 // Transitions
 $dur: 350ms;
@@ -19,7 +41,22 @@ $ease: ease;
 
 // Breakpoints
 $phone: 640;
+$tablet-small: 767;
 $tablet: 991;
 $tablet-l: 1199;
 $lap-small: 1250;
 $lap-large: 1400;
+
+
+// Box Shadows 
+
+$shadow-down: 0 10px 20px -5px rgba(193, 193, 193, 1);
+$shadow-down-left: -20px 20px 0 0 rgb(230, 219, 199);
+$shadow-down-right: 10px 10px 0 0 rgb(214, 198, 167);
+$shadow-down-left-mobile: -10px 10px 0 0 rgb(230, 219, 199);
+$shadow-cards-navigation: 0 3px 6px rgba(0, 0, 0, 0.161);
+$shadow-slider-thumb: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+$shadow-down-left-mobile: -10px 10px 0 0 rgb(230, 219, 199);
+$shadow-down-left-mobile-c: -5px 4px 0 5px rgb(230, 219, 199);
+$shadow-down-left-mobile-d: -10px -1px 0 0 rgb(230, 219, 199);

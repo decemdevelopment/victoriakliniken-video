@@ -81,8 +81,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Components / Templates
 --------------------------------------------------------------*/
+@import 'components/plugin-fancybox';
 @import 'components/site-header';
 @import 'components/site-navigation';
 @import 'components/site-footer';
 @import 'components/component-video-posts';
 @import 'components/component-hero-content';
+@import 'components/component-banner-small';
+@import 'helpers/overrides';

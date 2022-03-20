@@ -12,6 +12,14 @@ a {
 	}
 }
 
+@include mq($tablet) {
+	.sticky {
+		.main-navigation .primary-menu {
+			top: 75px;
+		}
+	}
+}
+
 .main-navigation {
 	.primary-menu {
 		list-style: none;
@@ -30,9 +38,9 @@ a {
 		position: absolute;
 		left: 0;
 		top: 100%;
-		border-top: 3px solid $white;
+		// border-top: 3px solid $white;
 		z-index: 99999;
-		background-color: $black;
+		background-color: $white;
 		transition: $dur $ease;
 		transform: translateY(5px);
 		display: none;
@@ -70,17 +78,27 @@ a {
 	a {
 		display: block;
 		text-decoration: none;
-		color: $white;
+		color: $black;
+		font-size: 15px;
+		text-transform: uppercase;
 		padding: 20px 15px;
+		transition: $dur $ease;
+
+		&:hover {
+			color: $beige;
+		}
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+	.accordion__item-title {
+		font-weight: normal;
 	}
 
-	@include mq($phone) {
+	.accordion__item-title-big {
+		font-family: $font-main;
+		font-style: initial;
+	}
+
+	@include mq($tablet) {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -90,10 +108,31 @@ a {
 		z-index: 100;
 		transition: $dur $ease $dur;
 
+		.entry-content {
+			margin: 33px 0;
+		}
+
+		.submenu-title .font-chevron-right {
+			transform: rotate(90deg);
+		}
+
+		.sub-menu-item a {
+			margin-bottom: 7px;
+			padding: unset;
+			font-size: 14px;
+			font-weight: 300;
+		}
+
+		.sub-menu-item {
+			&:last-child {
+				margin-bottom: 15px;
+			}
+		}
+
 		&::before {
 			content: '';
 			display: block;
-			background-color: rgba($black, .4);
+			// background-color: rgba($black, .4);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -113,23 +152,11 @@ a {
 			}
 
 			> ul {
-				transform: translateX(0);
+				// transform: translateX(0);
+				// transform: translateY(0);
+				height: calc(100% - 151px);
 				transition: $dur $ease 10ms;
 			}
-		}
-
-		.primary-menu {
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 230px;
-			height: 100%;
-			background-color: $black;
-			padding-top: 60px;
-			overflow: auto;
-			z-index: 100;
-			transform: translateX(100%);
-			transition: $dur ease;
 		}
 
 		.sub-menu {
@@ -175,6 +202,16 @@ a {
 			right: 60px;
 			top: 3px;
 			transition: $dur $ease;
+		}
+	}
+
+	@include mq($tablet, min) {
+		a {
+			color: $black;
+		}
+
+		.sub-menu {
+			background-color: $white;
 		}
 	}
 }

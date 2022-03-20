@@ -1,5 +1,5 @@
 .video-posts {
-    background: $gray-light;
+    background: $white-smoke;
     padding-bottom: 218px;
 
     .video-posts-container {
@@ -22,6 +22,8 @@
     }
 
     .video-post {
+        display: block;
+        margin-bottom: 50px;
         cursor: pointer;
     }
 
@@ -46,7 +48,7 @@
         display: block;
         // font-family: ;
         font-size: 15px;
-        color: $gray;
+        color: $grey;
         margin-bottom: 15px;
     }
 

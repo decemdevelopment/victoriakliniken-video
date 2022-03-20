@@ -1,0 +1,13 @@
+.d-hide {
+	@include mq($tablet, min) {
+		display: none;
+	}
+}
+
+.m-hide {
+	display: none;
+
+	@include mq($tablet, min) {
+		display: block;
+	}
+}

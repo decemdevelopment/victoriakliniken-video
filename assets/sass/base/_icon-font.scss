@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "fonticons";
-	src: url('assets/icons/fonticons.woff2?v=2020.5.13153310') format('woff2'), url('assets/icons/fonticons.woff?v=2020.5.13153310') format('woff'), url('assets/icons/fonticons.ttf?v=2020.5.13153310') format('truetype');
+	src: url('assets/icons/fonticons.woff2?v=2022.3.2034751') format('woff2'), url('assets/icons/fonticons.woff?v=2022.3.2034751') format('woff'), url('assets/icons/fonticons.ttf?v=2022.3.2034751') format('truetype');
 }
 
 @mixin font-styles {
@@ -22,14 +22,29 @@
 @function font-char($filename) {
 	$char: "";
 
-	@if $filename == clicking {
+	@if $filename == chevron-right {
 		$char: "\E001";
 	}
-	@if $filename == happy {
+	@if $filename == clicking {
 		$char: "\E002";
 	}
-	@if $filename == plus-circle {
+	@if $filename == facebook {
 		$char: "\E003";
+	}
+	@if $filename == happy {
+		$char: "\E004";
+	}
+	@if $filename == instagram {
+		$char: "\E005";
+	}
+	@if $filename == plus-circle {
+		$char: "\E006";
+	}
+	@if $filename == twitter {
+		$char: "\E007";
+	}
+	@if $filename == youtube {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -46,12 +61,27 @@
 	}
 }
 
+.font-chevron-right {
+	@include font(chevron-right);
+}
 .font-clicking {
 	@include font(clicking);
+}
+.font-facebook {
+	@include font(facebook);
 }
 .font-happy {
 	@include font(happy);
 }
+.font-instagram {
+	@include font(instagram);
+}
 .font-plus-circle {
 	@include font(plus-circle);
+}
+.font-twitter {
+	@include font(twitter);
+}
+.font-youtube {
+	@include font(youtube);
 }

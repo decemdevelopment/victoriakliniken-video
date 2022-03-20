@@ -14,7 +14,8 @@ get_header(); ?>
 
 			<?php 
 			get_template_part( 'template-parts/component', 'hero-content' );
-			get_template_part( 'template-parts/component', 'video-posts' ); 
+			get_template_part( 'template-parts/component', 'video-posts' );
+			get_template_part( 'template-parts/component', 'banner-small' ); 
 			?>
 	
 		</main><!-- #main -->
